@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#fef4f4"
         android:orientation="vertical">
 
         <LinearLayout
@@ -39,11 +40,13 @@
 
             <Button
                 android:id="@+id/start"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="10dp"
-                android:text="START" />
+                android:text="START"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -171,7 +174,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"/>
+            android:orientation="horizontal" />
 
     </LinearLayout>
 
