@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_result">com.example.myapplication.Result</string>
+    <string name="title_activity_resul">Resul</string>
+</resources>
