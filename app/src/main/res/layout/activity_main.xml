@@ -45,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/button_kakumaru"
                 android:text="START"
                 android:textColor="@android:color/black" />
 
