@@ -41,13 +41,11 @@
             <Button
                 android:id="@+id/start"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/button_kakumaru"
-                android:text="START"
-                android:textColor="@android:color/black" />
+                android:background="@drawable/war_bakuha_switch_off" />
 
             <TextView
                 android:id="@+id/textView3"
