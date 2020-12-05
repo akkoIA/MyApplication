@@ -122,7 +122,14 @@ class MainActivity : AppCompatActivity() {
 
         timerText.text = "0"
         val timer = MYCountDownTimer(1 * 60 * 1000, 1000)
+
+
         start.setOnClickListener{
+                    val game_explosion5= MediaPlayer.create(this,R.raw.scream1)
+
+            game_explosion5.seekTo(0)
+            game_explosion5.start()
+
             for (i in 0..2) {
                 for(j in 0..3) {
                     doaArray[i][j].setImageResource(R.drawable.doa)
@@ -136,7 +143,7 @@ class MainActivity : AppCompatActivity() {
             start.isClickable = false
         }
 
-        val game_explosion5= MediaPlayer.create(this,R.raw.game_explosion5)
+
 
 
         }
