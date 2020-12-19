@@ -36,12 +36,9 @@ class MainActivity : AppCompatActivity() {
             for(i in 0..2){
                 for(j in 0..3){
 
-                    if (riajuArray[i][j].hantei()){
-                        doaArray[i][j].setImageResource(R.drawable.riajuu_1)
-                    }else
-                    {
-                        doaArray[i][j].setImageResource(R.drawable.doa)
-                    }
+
+                    doaArray[i][j].setImageResource(riajuArray[i][j].hantei())
+
 
                     // 独自クラスから値を出力
                     val tempValue = riajuArray[i][j]
