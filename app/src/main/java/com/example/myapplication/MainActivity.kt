@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
 import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_main.*
@@ -27,7 +28,6 @@ class MainActivity : AppCompatActivity() {
     inner class MYCountDownTimer(millisInFuture: Long, countDownInterval: Long) :
         CountDownTimer(millisInFuture, countDownInterval) {
         var isRunning = false
-
 
         override fun onTick(millisUntilFisished: Long) {
             val sec = (millisUntilFisished / 1000L) % 60L
@@ -85,7 +85,15 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
-        
+
+        AlertDialog.Builder(this) // FragmentではActivityを取得して生成
+            .setTitle("遊び方")
+            .setMessage("クリボッチをタップすると減点")
+            .setPositiveButton("OK", { dialog, which ->
+                // TODO:Yesが押された時の挙動
+            })
+            .show()
+
         val koukaon=MediaPlayer.create(this,R.raw.game_explosion5)
 
         riajuArray = arrayOf(
