@@ -35,8 +35,9 @@ class MainActivity : AppCompatActivity() {
             //配列中の全ての要素に対して処理を行うための二重のfor文
             for(i in 0..2){
                 for(j in 0..3){
-
-
+                    if(sec<4L){
+                        riajuArray[i][j].kakuritu=100
+                    }
                     doaArray[i][j].setImageResource(riajuArray[i][j].hantei())
 
 
@@ -95,6 +96,7 @@ class MainActivity : AppCompatActivity() {
             .show()
 
         val koukaon=MediaPlayer.create(this,R.raw.game_explosion5)
+        val gentennon :MediaPlayer=MediaPlayer.create(this,R.raw.genren)
 
         riajuArray = arrayOf(
             arrayOf(Riaju(), Riaju(), Riaju(),Riaju()),
@@ -110,13 +112,22 @@ class MainActivity : AppCompatActivity() {
         for (i in 0..2){
             for (j in 0..3){
                 doaArray[i][j].setOnClickListener {
-                    if (riajuArray[i][j].pop){
+                    if (riajuArray[i][j].pop) {
+                        if (riajuArray[i][j].isRiaju) {
                         doaArray[i][j].setImageResource(R.drawable.bakuhatu)
                         koukaon.seekTo(0)
                         koukaon.start()
-                        score=score+addPoint
-                        point.text=score.toString()
+                        score = score + addPoint
+                        point.text = score.toString()
                         riajuArray[i][j].pop = false
+                    }else{
+                            doaArray[i][j].setImageResource(R.drawable.bakuhatu)
+                            gentennon.seekTo(0)
+                            gentennon.start()
+                            score = score - addPoint
+                            point.text = score.toString()
+                            riajuArray[i][j].pop = false
+                        }
                     }
                 }
 
