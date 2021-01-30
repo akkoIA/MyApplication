@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         AlertDialog.Builder(this) // FragmentではActivityを取得して生成
-            .setTitle("遊び方")
+            .setTitle("ルール")
             .setMessage("クリボッチをタップすると減点")
             .setPositiveButton("OK", { dialog, which ->
                 // TODO:Yesが押された時の挙動
