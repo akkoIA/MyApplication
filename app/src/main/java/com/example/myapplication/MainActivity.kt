@@ -37,6 +37,8 @@ class MainActivity : AppCompatActivity() {
                 for(j in 0..3){
                     if(sec<4L){
                         riajuArray[i][j].kakuritu=100
+                    }else{
+                        riajuArray[i][j].kakuritu=10
                     }
                     doaArray[i][j].setImageResource(
 
