@@ -47,4 +47,42 @@ class Riaju {
 
         }
     }
+
+    fun hanteilas():Int{
+        val random=(1..100).random()
+        pop = random<=kakuritu
+
+        if(pop){
+            var random2=(1..5).random()
+            when(random2){
+                1->{
+                    isRiaju=true
+                    return R.drawable.riajuu_1
+                }
+                2->{
+                    isRiaju=true
+                    return R.drawable.riajuu_2
+                }
+                3->{
+                    isRiaju=true
+                    return R.drawable.riajuu_3
+                }
+                4->{
+                    isRiaju=true
+                    return R.drawable.riajuu_4
+                }
+                5->{
+                    isRiaju=true
+                    return R.drawable.riajuu_5
+                }
+                else -> return R.drawable.doa
+            }
+
+
+
+        }else{
+            return R.drawable.doa
+
+        }
+    }
 }

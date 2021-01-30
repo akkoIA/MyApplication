@@ -38,11 +38,18 @@ class MainActivity : AppCompatActivity() {
                     if(sec<4L){
                         riajuArray[i][j].kakuritu=100
                     }
-                    doaArray[i][j].setImageResource(riajuArray[i][j].hantei())
+                    doaArray[i][j].setImageResource(
+
+                        if (sec>=4L){
+                            riajuArray[i][j].hantei()
+                        }else{
+                            riajuArray[i][j].hanteilas()
+                        }
+                    )
 
 
                     // 独自クラスから値を出力
-                    val tempValue = riajuArray[i][j]
+                 //   val tempValue = riajuArray[i][j]
                 }
             }
 
